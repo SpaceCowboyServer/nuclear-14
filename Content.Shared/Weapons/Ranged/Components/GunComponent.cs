@@ -10,6 +10,13 @@ namespace Content.Shared.Weapons.Ranged.Components;
 [AutoGenerateComponentState]
 public partial class GunComponent : Component
 {
+    /// <summary>
+    /// How much the ammo spreads when shot, in degrees. Does nothing if count is 0.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField("spread")]
+    public Angle Spread = Angle.FromDegrees(0);
+
+
     #region Sound
 
     [ViewVariables(VVAccess.ReadWrite), DataField("soundGunshot")]
